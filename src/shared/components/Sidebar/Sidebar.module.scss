@@ -1,0 +1,18 @@
+@use '@/assets/styles/variables' as *;
+
+.sidebar {
+    &__logo {
+        display: flex;
+        font-family: 'Distancia-Bold';
+        padding: 30px;
+        border-bottom: 1px solid $border-color;
+
+        &__img {
+            padding-right: 18px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+}

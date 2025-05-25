@@ -1,0 +1,16 @@
+@use '@/assets/styles/variables' as *;
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 23.8%;
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    width: 76.2%;
+}
