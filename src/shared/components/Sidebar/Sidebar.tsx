@@ -7,8 +7,10 @@ const Sidebar: React.FC = () => {
     return (
         <>
             <div className={styles.sidebar__logo}>
-                <Logo className={styles.sidebar__logo__img} />
-                <span className={styles.sidebar__logo__text}>Crypto Crack</span>
+                <NavLink className={styles.sidebar__logo__text} to='/'>
+                    <Logo className={styles.sidebar__logo__img} />
+                    Crypto Crack
+                </NavLink>
             </div>
             <div className={styles.sidebar__links}>
                 <ul className={styles.sidebar__links__menu}>

@@ -13,6 +13,10 @@
 
         &__text {
             font-size: $font-size-l;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $header-color;
         }
     }
 
