@@ -3,7 +3,7 @@
 .sidebar {
     &__logo {
         display: flex;
-        font-family: 'Distancia-Bold';
+        font-family: $font-distancia;
         padding: 30px;
         border-bottom: 1px solid $border-color;
 
@@ -12,7 +12,79 @@
         }
 
         &__text {
-            font-size: 16px;
+            font-size: $font-size-l;
+        }
+    }
+
+    &__links {
+        padding: 22px 36px 26px 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__menu,
+        &__external {
+            list-style-type: none;
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            &__item,
+            &__item--active {
+                font-size: $font-size-l;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                padding-left: 8px;
+
+                & > svg {
+                    margin-right: 10px;
+                }
+            }
+
+            &__item {
+                color: $menu-text-color;
+                max-width: fit-content;
+                font-family: $font-pjs-semi;
+            }
+
+            &__item--active {
+                color: $menu-active-color;
+                font-family: $font-pjs-bold;
+                background: linear-gradient(to right, #a2e8a2, #4caf50);
+                border-radius: 12px;
+                border: none;
+                outline: none;
+                padding: 8px 8px 9px;
+
+                svg path:nth-last-child(1) {
+                    fill: $menu-active-color;
+                    stroke: $menu-active-color;
+                }
+            }
+        }
+
+        &__external {
+            padding-left: 13px;
+
+            li {
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                color: $menu-text-color;
+                text-decoration: none;
+                font-family: $font-pjs-medium;
+                font-size: $font-size-m;
+            }
+
+            svg {
+                margin-left: 5px;
+            }
         }
     }
 }

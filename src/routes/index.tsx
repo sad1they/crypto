@@ -3,6 +3,7 @@ import Dashboard from '@/pages/Dashboard'
 import Wallet from '@/pages/Wallet'
 import Settings from '@/pages/Settings'
 import Layout from '@/layouts'
+import Documentation from '@/pages/Documentation'
 
 export const routes: RouteObject[] = [
     {
@@ -22,5 +23,9 @@ export const routes: RouteObject[] = [
                 element: <Settings />,
             },
         ],
+    },
+    {
+        path: '/documentation',
+        element: <Documentation />,
     },
 ]

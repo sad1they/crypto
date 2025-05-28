@@ -1,6 +1,7 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { ArrowTrendUp, Home, Logo, Setting, Wallet } from '@/assets/images'
 import styles from './Sidebar.module.scss'
-import { Logo } from '@/assets/images'
 
 const Sidebar: React.FC = () => {
     return (
@@ -9,8 +10,77 @@ const Sidebar: React.FC = () => {
                 <Logo className={styles.sidebar__logo__img} />
                 <span className={styles.sidebar__logo__text}>Crypto Crack</span>
             </div>
-            <div>Menu</div>
-            <div>External</div>
+            <div className={styles.sidebar__links}>
+                <ul className={styles.sidebar__links__menu}>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive
+                                    ? styles[
+                                          'sidebar__links__menu__item--active'
+                                      ]
+                                    : styles['sidebar__links__menu__item']
+                            }
+                            to='/'
+                        >
+                            <Home />
+                            Dashboard
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive
+                                    ? styles[
+                                          'sidebar__links__menu__item--active'
+                                      ]
+                                    : styles['sidebar__links__menu__item']
+                            }
+                            to='/wallet'
+                        >
+                            <Wallet />
+                            Wallet
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive
+                                    ? styles[
+                                          'sidebar__links__menu__item--active'
+                                      ]
+                                    : styles['sidebar__links__menu__item']
+                            }
+                            to='/settings'
+                        >
+                            <Setting />
+                            Settings
+                        </NavLink>
+                    </li>
+                </ul>
+                <ul className={styles.sidebar__links__external}>
+                    <li>
+                        <NavLink
+                            to='/documentation'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Documentation
+                            <ArrowTrendUp />
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to='https://t.me/sadizey'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Telegram
+                            <ArrowTrendUp />
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
         </>
     )
 }
